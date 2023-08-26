@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['umars-woodworking.herokuapp.com', 
+ALLOWED_HOSTS = ['umars-woodworking-78c6e707aec6.herokuapp.com',
     '8000-uhassam0-umars-woodworki-ne0mrwmf2a.us2.codeanyapp.com']
 
 
