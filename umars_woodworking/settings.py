@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['umars-woodworking-78c6e707aec6.herokuapp.com',
-    '8000-uhassam0-umars-woodworki-ne0mrwmf2a.us2.codeanyapp.com']
+                 '8000-uhassam0-umars-woodworki-3f0c4urrgb.us2.codeanyapp.com']
 
 
 # Application definition
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'django_summernote',
     'getting_projects',
 ]
 
