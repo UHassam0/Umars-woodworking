@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+    <h1> Does it work    </h1>
+</div>
+
+    {% for proj in example_projects %}
+
+        <p>{{ proj.subject }}
+        {{ proj.description | safe}}</p>
+        <p>{{ proj.client }}</p>
+        <img src="{{ proj.image.url }}">
+
+    {% endfor %}
+
+{% endblock %}
