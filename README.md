@@ -39,3 +39,8 @@ respond to requests
 ## Deployment, forking, cloning
 
 ## References
+
+Hero Image? - Photo by Lum3n from Pexels: <https://www.pexels.com/photo/wood-chips-227577/>
+<https://mdbootstrap.com/learn/mdb-foundations/bootstrap/hero-image/> - hero image help
+https://www.w3schools.com/howto/howto_css_hero_image.asp
+Bing Chat to generate some fluff text

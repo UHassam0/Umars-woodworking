@@ -1,18 +1,59 @@
-{% extends "base.html" %}
-
+{% extends "base.html" %} 
 {% block content %}
 
-<div>
-    <h1> Does it work    </h1>
+    <div class="row justify-content-center intro">
+        <div class="col-8">
+        <p>Welcome to Umar's Woodworking, a website where you can discover the art and craft of woodworking. My name is Umar and I
+        am a woodworker based in Birmingham, UK. I have been passionate about woodworking since I was a child and I love to
+        create beautiful and functional pieces of furniture, decor, and accessories from wood.</p>
+
+        <p>On this website, you can see some of my projects that showcase my skills and style. You can also submit and manage
+        requests for a booking if you are interested in hiring me for your woodworking needs. Whether you want a custom-made
+        table, a bookshelf, a cutting board, or anything else made of wood, I can help you turn your vision into reality.</p>
+
+        <p>I work with different types of wood, such as oak, pine, walnut, and cherry, and I use various techniques, such as
+        carving, turning, joinery, and finishing. I pay attention to every detail and ensure that each piece is made with
+        quality and care. I also follow the best practices of environmental sustainability and use recycled or reclaimed wood
+        whenever possible.</p>
+
+        <p>If you have any questions or comments, please feel free to contact me through the website or by email. I would love to
+        hear from you and discuss your woodworking ideas. Thank you for visiting Umar's Woodworking and I hope you enjoy
+        browsing through my website. </p>
+    </div>
+    </div>
+
+
+<div class="col-12 mt-3 left">
+    <div class="row">
+        {% for proj in example_projects %}
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="image-container">
+                        {% if "placeholder" in proj.image.url %}
+                        <img class="card-img-top"
+                            src="http://drive.google.com/uc?export=view&id=1_CCbW7i4pQR77Io7ufEZTuqO-0VPBx8O">
+                        {% else %}
+                        <img class="card-img-top img-small" src=" {{ proj.image.url }}">
+                        {% endif %}
+
+                    </div>
+
+                    <h2 class="card-title">{{ proj.project_name }}</h2>
+                    <p>{{ proj.description | safe | truncatechars:100 }}</p>
+
+                </div>
+            </div>
+        </div>
+        {% if forloop.counter|divisibleby:3 %}
+    </div>
+    <div class="row">
+        {% endif %}
+        {% endfor %}
+
+    </div>
+    </div>
 </div>
 
-    {% for proj in example_projects %}
-
-        <p>{{ proj.subject }}
-        {{ proj.description | safe}}</p>
-        <p>{{ proj.client }}</p>
-        <img src="{{ proj.image.url }}">
-
-    {% endfor %}
 
 {% endblock %}
