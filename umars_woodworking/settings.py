@@ -35,6 +35,8 @@ ALLOWED_HOSTS = ['umars-woodworking-78c6e707aec6.herokuapp.com',
                  '8000-uhassam0-umars-woodworki-otm1wrt9s1.us2.codeanyapp.com']
 
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -46,6 +48,10 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'crispy_forms',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'django_summernote',
     'getting_projects',
 ]

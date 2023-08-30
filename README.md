@@ -28,6 +28,8 @@ respond to requests
 
 ### Bugs Resolved and Unresolved
 
+collectstatic match cloudinary to workspace especially overwrite/replace style.css from walkthrough
+
 ### Lighthouse testing
 
 ### Code Validation
