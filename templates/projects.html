@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+{% if user.is_superuser %}
 <div>
     <a href="{% url 'create' %}">
         <button type="button" class="btn btn-success">Add New Project</button>
@@ -10,6 +11,13 @@
         {% for proj in projects %}
         <div class="col-md-4">
             <div class="card mb-4">
+                
+                <div class="card-header">
+                    <a href="{% url 'edit' proj.pk %}">
+                        <button>Edit</button>
+                    </a>
+                </div>
+
                 <div class="card-body">
                     <div class="image-container">
                         {% if "placeholder" in proj.image.url %}
@@ -22,6 +30,7 @@
                     </div>
 
                     <h2 class="card-title">{{ proj.project_name }}</h2>
+                    <h6>Is Publically Visible?: {{ proj.public_visible }}</h6>
                     <p>{{ proj.description | safe | truncatechars:100 }}</p>
 
                 </div>
@@ -36,6 +45,14 @@
     </div>
 </div>
 </div>
+{% else %}
 
+<div class="mt-5 text-center">
+    <h3>Sorry!! This Page Is Restricted</h3>
 
+    <a href="{% url 'example_projects' %}">
+        <button type="button" class="btn btn-success btn-lg">Return Home</button>
+    </a>
+</div>
+{% endif %}
 {% endblock %}

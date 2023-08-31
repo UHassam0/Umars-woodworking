@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+{% if user.is_superuser %}
+
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form | crispy }}
+    <input type="submit" value="Save">
+</form>
+
+{% else %}
+<div class="mt-5 text-center">
+    <h3>Only Admin can edit Projects</h3>
+
+    <a href="{% url 'example_projects' %}">
+        <button type="button" class="btn btn-success btn-lg">Return Home</button>
+    </a>
+</div>
+{% endif %}
+{% endblock %}

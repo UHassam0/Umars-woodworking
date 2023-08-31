@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404
+from django.urls import reverse_lazy
 from django.views import generic, View
 from .models import ExampleProject
 from .forms import ProjectForm
@@ -21,4 +22,11 @@ class CreateProject(generic.CreateView):
     model = ExampleProject
     template_name = "createproject.html"
     form_class = ProjectForm
-    success_url = 'projects'
+    success_url = reverse_lazy('manage')
+
+
+class EditProject(generic.UpdateView):
+    model = ExampleProject
+    template_name = "editproject.html"
+    form_class = ProjectForm
+    success_url = reverse_lazy('manage')
