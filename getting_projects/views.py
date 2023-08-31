@@ -30,3 +30,10 @@ class EditProject(generic.UpdateView):
     template_name = "editproject.html"
     form_class = ProjectForm
     success_url = reverse_lazy('manage')
+
+
+class DeleteProject(generic.DeleteView):
+    model = ExampleProject
+    template_name = "deleteproject.html"
+    success_url = reverse_lazy('manage')
+    context_object_name = "project"
