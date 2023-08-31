@@ -6,4 +6,3 @@ class ProjectForm(forms.ModelForm):
     class Meta:
         model = ExampleProject
         fields = "__all__"
-

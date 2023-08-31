@@ -37,6 +37,11 @@ ALLOWED_HOSTS = ['umars-woodworking-78c6e707aec6.herokuapp.com',
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
 # Application definition
 
 INSTALLED_APPS = [
