@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 <div>
-    <button type="button" class="btn btn-success">Add New Project</button>
+    <a href="{% url 'create' %}">
+        <button type="button" class="btn btn-success">Add New Project</button>
+    </a>
 </div>
 <div class="col-12 mt-3 left">
     <div class="row">

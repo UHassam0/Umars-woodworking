@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from .models import ExampleProject
+from.forms import ProjectForm
 
 
 class Homepage(generic.ListView):
@@ -15,6 +16,9 @@ class Projects(generic.ListView):
     template_name = "projects.html"
     context_object_name = "projects"
 
+
 class CreateProject(generic.CreateView):
     model = ExampleProject
-    fields = __all__
+    template_name = "createproject.html"
+    form_class = ProjectForm
+    success_url = 'manage'
