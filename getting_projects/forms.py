@@ -1,8 +1,8 @@
-from .models import ExampleProject
+from .models import Project
 from django import forms
 
 
 class ProjectForm(forms.ModelForm):
     class Meta:
-        model = ExampleProject
+        model = Project
         fields = ('project_name', 'public_visible', 'description', 'image')

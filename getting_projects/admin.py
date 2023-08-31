@@ -1,10 +1,10 @@
 from django.contrib import admin
-from .models import ExampleProject, Booking
+from .models import Project, Booking
 from django_summernote.admin import SummernoteModelAdmin
 
 
-@admin.register(ExampleProject)
-class ExampleProjectAdmin(SummernoteModelAdmin):
+@admin.register(Project)
+class ProjectAdmin(SummernoteModelAdmin):
     list_display = ('project_name', 'slug', 'description',
                     'public_visible', 'updated_on')
     search_fields = ['project_name', 'description']
