@@ -21,4 +21,4 @@ class CreateProject(generic.CreateView):
     model = ExampleProject
     template_name = "createproject.html"
     form_class = ProjectForm
-    success_url = 'manage'
+    success_url = 'projects'

@@ -14,7 +14,7 @@ There may be 3 type of users:
 ## Features
 
 Homepage
-Example Projects
+Example Projects - manage and display
 submit a project/meeting request
 respond to requests
 
@@ -29,6 +29,8 @@ respond to requests
 ### Bugs Resolved and Unresolved
 
 collectstatic match cloudinary to workspace especially overwrite/replace style.css from walkthrough
+not auto completing slug on create projects page
+not notifying user when projects created - although takes back to manage projects and shows it there at the top
 
 ### Lighthouse testing
 
