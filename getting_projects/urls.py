@@ -11,5 +11,7 @@ urlpatterns = [
     path('projects/<int:pk>/delete',
          views.DeleteProject.as_view(), name='delete_project'),
     path('bookings', views.Bookings.as_view(), name='bookings'),
-    path('createbooking', views.CreateBooking.as_view(), name='create_booking')
+    path('createbooking', views.CreateBooking.as_view(),
+         name='create_booking'),
+    path('reviewbookings', views.ReviewBookings.as_view(), name='rev_bk')
 ]

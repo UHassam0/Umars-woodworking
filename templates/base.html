@@ -50,7 +50,8 @@
                   >Manage Projects</a
                 >
               </li>
-              {% endif %} {% if user.is_authenticated %}
+              {% endif %} 
+              {% if user.is_authenticated %}
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
@@ -69,10 +70,14 @@
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="{% url 'bookings' %}"
-                      >View Bookings</a
-                    >
+                    <a class="dropdown-item" href="{% url 'bookings' %}">View Bookings</a>
                   </li>
+                                {% if user.is_superuser %}
+
+                <li>
+                    <a class="dropdown-item" href="{% url 'rev_bk' %}">Review Upcoming Bookings</a>
+                </li>
+                {% endif %}
                 </ul>
               </li>
 
@@ -84,7 +89,8 @@
                 </a>
               </li>
 
-              {% endif %} {% if user.is_authenticated %}
+              {% endif %} 
+              {% if user.is_authenticated %}
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
               </li>

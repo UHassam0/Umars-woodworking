@@ -3,6 +3,7 @@ from django.urls import reverse_lazy
 from django.views import generic, View
 from .models import Project, Booking
 from .forms import ProjectForm, BookingForm
+from datetime import date
 
 
 class Homepage(generic.ListView):
@@ -57,3 +58,10 @@ class CreateBooking(generic.CreateView):
     def form_valid(self, form):
         form.instance.client = self.request.user
         return super().form_valid(form)
+
+
+class ReviewBookings(generic.ListView):
+    model = Booking
+    template_name = "upcoming_bookings.html"
+    context_object_name = "bookings"
+    queryset = Booking.objects.filter(booking_date__gte=date.today())

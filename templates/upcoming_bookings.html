@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+{% if user.is_superuser %}
+<div class="container mt-5">
+    <h4 class="text-center">Bookings</h4>
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-8">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Discussion Details</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Mobile</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for booking in bookings %}
+                    <tr>
+                        <th scope="row">{{ booking.booking_subject }}</th>
+                        <td>{{ booking.discussion_details }}</td>
+                        <td>{{ booking.booking_date }}</td>
+                        <td>{{ booking.booking_time }}</td>
+                        <td>{{ booking.mobile_number }}</td>
+                        <td>{{ booking.email_address }}</td>
+                        <td>{{ booking.get_booking_status_display }}</td>
+                    </tr>
+
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% else %}
+
+<div class="mt-5 text-center">
+    <h3>Resctricted Page</h3>
+
+<a href="{% url 'home' %}">
+    <button type="button" class="btn btn-success btn-lg">Return Home</button>
+</a>
+</div>
+
+{% endif %}
+{% endblock %}

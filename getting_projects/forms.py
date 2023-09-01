@@ -11,4 +11,5 @@ class ProjectForm(forms.ModelForm):
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = ('booking_subject', 'discussion_details', 'booking_date', 'booking_time')
+        fields = ('booking_subject', 'discussion_details', 'booking_date',
+                  'booking_time')
