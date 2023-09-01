@@ -9,7 +9,7 @@ class Homepage(generic.ListView):
     model = Project
     queryset = Project.objects.filter(public_visible=True)
     template_name = "index.html"
-    context_object_name = "example_projects"
+    context_object_name = "projects"
 
 
 class Projects(generic.ListView):

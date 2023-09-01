@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+{% if user.is_authenticated %}
+
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form | crispy }}
+    <input type="submit" value="Save">
+</form>
+
+{% else %}
+<div class="mt-5 text-center">
+    <h3>you need to login or signup</h3>
+
+    <a href="{% url 'example_projects' %}">
+        <button type="button" class="btn btn-success btn-lg">Go to Login</button>
+    </a>
+    <a href="{% url 'account_signup' %}">
+        <button type="button" class="btn btn-success btn-lg">Go to Signup</button>
+    </a>
+</div>
+{% endif %}
+{% endblock %}
