@@ -1,23 +1,21 @@
-{% extends "base.html" %}
-{% block content %}
-
-
+{% extends "base.html" %} 
+{% block content %} 
 {% if user.is_superuser %}
 
 <form action="" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <p>Are you sure you want to delete "{{ project.project_name}}"?</p>
-    <input type="submit" value="Confirm">
-    <a href="{% url 'manage' %}"><button>Cancel</button></a>
+  {% csrf_token %}
+  <p>Are you sure you want to delete "{{ project.project_name}}"?</p>
+  <input type="submit" value="Confirm" />
+  <a href="{% url 'manage' %}"><button>Cancel</button></a>
 </form>
 
 {% else %}
 <div class="mt-5 text-center">
-    <h3>Only Admin can delete projects</h3>
+  <h3>Only Admin can delete projects</h3>
 
-    <a href="{% url 'home' %}">
-        <button type="button" class="btn btn-success btn-lg">Return Home</button>
-    </a>
+  <a href="{% url 'home' %}">
+    <button type="button" class="btn btn-success btn-lg">Return Home</button>
+  </a>
 </div>
 {% endif %}
 {% endblock %}

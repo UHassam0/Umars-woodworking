@@ -1,14 +1,13 @@
-
 .intro {
-    background-image: url("http://drive.google.com/uc?export=view&id=1_CCbW7i4pQR77Io7ufEZTuqO-0VPBx8O");
-    color: white;
+  background-image: url("http://drive.google.com/uc?export=view&id=1_CCbW7i4pQR77Io7ufEZTuqO-0VPBx8O");
+  color: white;
 }
 
 p {
-    font-size: medium;
+  font-size: medium;
 }
 
 .img-small {
-    max-height: auto;
-    width: 180px;
+  max-height: auto;
+  width: 180px;
 }

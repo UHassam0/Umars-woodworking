@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views import generic, View
-from .models import Project
-from .forms import ProjectForm
+from .models import Project, Booking
+from .forms import ProjectForm, BookingForm
 
 
 class Homepage(generic.ListView):
@@ -37,3 +37,23 @@ class DeleteProject(generic.DeleteView):
     template_name = "delete_project.html"
     success_url = reverse_lazy('manage')
     context_object_name = "project"
+
+
+class Bookings(generic.ListView):
+    model = Booking
+    template_name = "bookings.html"
+    context_object_name = "bookings"
+
+    def get_queryset(self):
+        return Booking.objects.filter(client=self.request.user)
+
+
+class CreateBooking(generic.CreateView):
+    model = Booking
+    template_name = "create_booking.html"
+    form_class = BookingForm
+    success_url = reverse_lazy('bookings')
+
+    def form_valid(self, form):
+        form.instance.client = self.request.user
+        return super().form_valid(form)

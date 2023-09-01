@@ -1,21 +1,23 @@
 {% extends "base.html" %} 
 {% block content %} 
 {% load crispy_forms_tags %} 
-{% if user.is_superuser %}
+{% if user.is_authenticated %}
 
 <form action="" method="post" enctype="multipart/form-data">
   {% csrf_token %} 
   {{ form | crispy }}
   <input type="submit" value="Save" />
-  <a href="{% url 'manage' %}"><button>Cancel</button></a>
 </form>
 
 {% else %}
 <div class="mt-5 text-center">
-  <h3>Only Admin can edit Projects</h3>
+  <h3>you need to login or signup</h3>
 
-  <a href="{% url 'home' %}">
-    <button type="button" class="btn btn-success btn-lg">Return Home</button>
+  <a href="{% url 'account_login' %}">
+    <button type="button" class="btn btn-success btn-lg">Go to Login</button>
+  </a>
+  <a href="{% url 'account_signup' %}">
+    <button type="button" class="btn btn-success btn-lg">Go to Signup</button>
   </a>
 </div>
 {% endif %} 

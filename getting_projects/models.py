@@ -29,5 +29,6 @@ class Booking(models.Model):
     discussion_details = models.TextField()
     booking_subject = models.CharField(max_length=200)
     mobile_number = models.CharField(max_length=17)
-    STATUS = ((0, "Accepted"), (1, "Discussed"), (2, "Rejected"), (3, "Pending"))
+    STATUS = ((0, "Accepted"), (1, "Discussed"),
+              (2, "Rejected"), (3, "Pending"))
     booking_status = models.IntegerField(choices=STATUS, default=3)
