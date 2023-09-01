@@ -65,3 +65,17 @@ class ReviewBookings(generic.ListView):
     template_name = "upcoming_bookings.html"
     context_object_name = "bookings"
     queryset = Booking.objects.filter(booking_date__gte=date.today())
+
+
+class EditBooking(generic.UpdateView):
+    model = Booking
+    template_name = "edit_booking.html"
+    context_object_name = 'booking'
+    success_url = reverse_lazy('rev_bk')
+    fields = '__all__'
+
+
+        # if booking.booking_status == 3:
+        #     booking.booking_status = 0
+        #     booking.save()
+        # return reverse_lazy('rev_bk')

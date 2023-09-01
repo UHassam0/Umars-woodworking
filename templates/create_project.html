@@ -8,6 +8,7 @@
   {% csrf_token %} 
   {{ form | crispy }}
   <input type="submit" value="Save" />
+<a href="{% url 'manage' %}"><button>Cancel</button></a>
 </form>
 
 {% else %}
