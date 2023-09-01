@@ -31,6 +31,8 @@ respond to requests
 collectstatic match cloudinary to workspace especially overwrite/replace style.css from walkthrough
 not auto completing slug on create projects page
 not notifying user when projects created - although takes back to manage projects and shows it there at the top
+homepage horizontal scroll required
+cancel button on edit
 
 ### Lighthouse testing
 

@@ -20,20 +20,20 @@ class Projects(generic.ListView):
 
 class CreateProject(generic.CreateView):
     model = Project
-    template_name = "createproject.html"
+    template_name = "create_project.html"
     form_class = ProjectForm
     success_url = reverse_lazy('manage')
 
 
 class EditProject(generic.UpdateView):
     model = Project
-    template_name = "editproject.html"
+    template_name = "edit_project.html"
     form_class = ProjectForm
     success_url = reverse_lazy('manage')
 
 
 class DeleteProject(generic.DeleteView):
     model = Project
-    template_name = "deleteproject.html"
+    template_name = "delete_project.html"
     success_url = reverse_lazy('manage')
     context_object_name = "project"
