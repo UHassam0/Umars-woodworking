@@ -8,8 +8,30 @@ class ProjectForm(forms.ModelForm):
         fields = ('project_name', 'public_visible', 'description', 'image')
 
 
+class DateInput(forms.DateInput):
+    input_type = "date"
+
+
+class TimeInput(forms.TimeInput):
+    input_type = "time"
+
+
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
         fields = ('booking_subject', 'discussion_details', 'booking_date',
                   'booking_time')
+        widgets = {
+            "booking_date": DateInput(),
+            "booking_time": TimeInput()
+        }
+
+
+class EdtBkngFrm(forms.ModelForm):
+    class Meta:
+        model = Booking
+        fields = '__all__'
+        widgets = {
+            "booking_date": DateInput(),
+            "booking_time": TimeInput()
+        }

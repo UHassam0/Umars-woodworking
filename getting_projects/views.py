@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views import generic, View
 from .models import Project, Booking
-from .forms import ProjectForm, BookingForm
+from .forms import ProjectForm, BookingForm, EdtBkngFrm
 from datetime import date
 
 
@@ -72,10 +72,4 @@ class EditBooking(generic.UpdateView):
     template_name = "edit_booking.html"
     context_object_name = 'booking'
     success_url = reverse_lazy('rev_bk')
-    fields = '__all__'
-
-
-        # if booking.booking_status == 3:
-        #     booking.booking_status = 0
-        #     booking.save()
-        # return reverse_lazy('rev_bk')
+    form_class = EdtBkngFrm

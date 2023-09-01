@@ -22,6 +22,8 @@ respond to requests
 
 ## Testing
 
+[TESTING.md](TESTING.md)
+
 ### Responsiveness Testing
 
 ### Browser Compatibility
@@ -48,8 +50,9 @@ cancel button on edit
 
 Hero Image? - Photo by Lum3n from Pexels: <https://www.pexels.com/photo/wood-chips-227577/>
 <https://mdbootstrap.com/learn/mdb-foundations/bootstrap/hero-image/> - hero image help
-https://www.w3schools.com/howto/howto_css_hero_image.asp
+<https://www.w3schools.com/howto/howto_css_hero_image.asp>
 Bing Chat to generate some fluff text
-https://stackoverflow.com/questions/35751772/setting-current-user-on-django-vanilla-createview
+<https://stackoverflow.com/questions/35751772/setting-current-user-on-django-vanilla-createview>
 <https://stackoverflow.com/questions/63550890/how-to-pass-logged-users-id-to-createview>
 <https://stackoverflow.com/questions/66248147/could-someone-explain-why-we-return-super-form-validform-in-form-valid-metho>
+[Form date field fix](https://forum.djangoproject.com/t/cant-change-type-attribute-in-django-crispy-forms/10054/11)
