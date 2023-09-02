@@ -59,3 +59,4 @@ Bing Chat to generate some fluff text
 [Top 5 errors accoring o Google](https://www.pingdom.com/blog/the-5-most-common-http-errors-according-to-google/)
 [remove bootstrap button line](https://stackoverflow.com/questions/66436957/how-to-remove-the-small-blue-line-in-bootstrap-buttons)
 Image by <a href="https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=24260">Clker-Free-Vector-Images</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=24260">Pixabay</a>
+[Footer from here](https://startbootstrap.com/snippets/sticky-footer-flexbox)

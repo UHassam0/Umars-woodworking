@@ -30,7 +30,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['umars-woodworking-78c6e707aec6.herokuapp.com',
                  '8000-uhassam0-umars-woodworki-otm1wrt9s1.us2.codeanyapp.com']
