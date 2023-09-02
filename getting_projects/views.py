@@ -35,6 +35,7 @@ class EditProject(SuccessMessageMixin, generic.UpdateView):
     success_url = reverse_lazy('manage')
     success_message = "%(project_name)s was updated successfully"
 
+
 class DeleteProject(SuccessMessageMixin, generic.DeleteView):
     model = Project
     template_name = "delete_project.html"

@@ -7,15 +7,14 @@
   {% csrf_token %} 
   {{ form | crispy }}
   <input type="submit" value="Save" />
-  <a href="{% url 'manage' %}"><button>Cancel</button></a>
+  <a href="{% url 'manage' %}" type="button">Cancel</a>
 </form>
 
 {% else %}
 <div class="mt-5 text-center">
   <h3>Only Admin can edit projects</h3>
 
-  <a href="{% url 'home' %}">
-    <button type="button" class="btn btn-success btn-lg">Return Home</button>
+  <a href="{% url 'home' %}" type="button" class="btn btn-success btn-lg">Return Home
   </a>
 </div>
 {% endif %} 

@@ -13,11 +13,11 @@
             <div class="card mb-4">
                 
                 <div class="card-header">
-                    <a href="{% url 'edit_project' proj.pk %}">
-                        <button class="btn btn-warning">Edit</button>
+                    <a href="{% url 'edit_project' proj.pk %}" type="button"
+                     class="btn btn-warning">Edit
                     </a>
-                    <a href="{% url 'delete_project' proj.pk %}">
-                        <button class="btn btn-danger">Delete</button>
+                    <a href="{% url 'delete_project' proj.pk %}" type="button"
+                    class="btn btn-danger">Delete
                     </a>
                 </div>
 
@@ -53,8 +53,7 @@
 <div class="mt-5 text-center">
     <h3>Sorry!! This Page Is Restricted</h3>
 
-    <a href="{% url 'home' %}">
-        <button type="button" class="btn btn-success btn-lg">Return Home</button>
+    <a href="{% url 'home' %}" type="button" class="btn btn-success btn-lg">Return Home
     </a>
 </div>
 {% endif %}

@@ -56,3 +56,5 @@ Bing Chat to generate some fluff text
 <https://stackoverflow.com/questions/63550890/how-to-pass-logged-users-id-to-createview>
 <https://stackoverflow.com/questions/66248147/could-someone-explain-why-we-return-super-form-validform-in-form-valid-metho>
 [Form date field fix](https://forum.djangoproject.com/t/cant-change-type-attribute-in-django-crispy-forms/10054/11)
+[Top 5 errors accoring o Google](https://www.pingdom.com/blog/the-5-most-common-http-errors-according-to-google/)
+[remove bootstrap button line](https://stackoverflow.com/questions/66436957/how-to-remove-the-small-blue-line-in-bootstrap-buttons)
