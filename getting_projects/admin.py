@@ -5,11 +5,10 @@ from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Project)
 class ProjectAdmin(SummernoteModelAdmin):
-    list_display = ('project_name', 'slug', 'description',
+    list_display = ('project_name', 'description',
                     'public_visible', 'updated_on')
     search_fields = ['project_name', 'description']
     list_filter = ('public_visible', 'updated_on')
-    prepopulated_fields = {'slug': ('project_name',)}
     summernote_fields = ('description',)
 
 

@@ -5,7 +5,6 @@ from cloudinary.models import CloudinaryField
 
 class Project(models.Model):
     project_name = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
     public_visible = models.BooleanField(default=False)
     description = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)

@@ -1,3 +1,4 @@
+from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views import generic, View
@@ -19,25 +20,27 @@ class Projects(generic.ListView):
     context_object_name = "projects"
 
 
-class CreateProject(generic.CreateView):
+class CreateProject(SuccessMessageMixin, generic.CreateView):
     model = Project
     template_name = "create_project.html"
     form_class = ProjectForm
     success_url = reverse_lazy('manage')
+    success_message = "%(project_name)s was created successfully"
 
 
-class EditProject(generic.UpdateView):
+class EditProject(SuccessMessageMixin, generic.UpdateView):
     model = Project
     template_name = "edit_project.html"
     form_class = ProjectForm
     success_url = reverse_lazy('manage')
+    success_message = "%(project_name)s was updated successfully"
 
-
-class DeleteProject(generic.DeleteView):
+class DeleteProject(SuccessMessageMixin, generic.DeleteView):
     model = Project
     template_name = "delete_project.html"
     success_url = reverse_lazy('manage')
     context_object_name = "project"
+    success_message = "%(project_name)s was deleted successfully"
 
 
 class Bookings(generic.ListView):
@@ -49,11 +52,12 @@ class Bookings(generic.ListView):
         return Booking.objects.filter(client=self.request.user)
 
 
-class CreateBooking(generic.CreateView):
+class CreateBooking(SuccessMessageMixin, generic.CreateView):
     model = Booking
     template_name = "create_booking.html"
     form_class = BookingForm
     success_url = reverse_lazy('bookings')
+    success_message = "%(booking_subject)s was created successfully"
 
     def form_valid(self, form):
         form.instance.client = self.request.user
@@ -67,9 +71,10 @@ class ReviewBookings(generic.ListView):
     queryset = Booking.objects.filter(booking_date__gte=date.today())
 
 
-class EditBooking(generic.UpdateView):
+class EditBooking(SuccessMessageMixin, generic.UpdateView):
     model = Booking
     template_name = "edit_booking.html"
     context_object_name = 'booking'
     success_url = reverse_lazy('rev_bk')
+    success_message = "%(booking_subject)s was edited successfully"
     form_class = EdtBkngFrm
