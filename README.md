@@ -4,7 +4,7 @@
 
 Umar's Imaginary Woodworking is inspired by my uncle and my brother. My uncle is an avid woodworker and has produced some awesome pieces andmy brother is starting on is journey. Unfortunately, I have been unable to include much of their work at this time. This is a little site as if we are woodworker and carpenter taking bookings for consultations and work. We are able to upload and showcase our projects and visitors to the site are able to login and make and manage bookings for consultations/appointments with us. Hence the webpage now says Hassam Woodworking
 
-Live site: [HERE](https://umars-woodworking-78c6e707aec6.herokuapp.com/)
+**Live site: [HERE](https://umars-woodworking-78c6e707aec6.herokuapp.com/)**
 
 ## Contents
 
@@ -15,6 +15,7 @@ Live site: [HERE](https://umars-woodworking-78c6e707aec6.herokuapp.com/)
     - [The Scope Plane](#the-scope-plane)
     - [The Structure Plane](#the-structure-plane)
     - [The Skeleton Plane](#the-skeleton-plane)
+    - [The Surface Plane](#the-surface-plane)
   - [Features](#features)
   - [Technologies](#technologies)
   - [Testing](#testing)
@@ -43,10 +44,28 @@ The vision is to provide a family the ability to showcase their woodworking that
 
 ### The Structure Plane
 
-I drew some basic wireframes to cover the main pages
-![Wireframes](./readme_images/wireframes.png) 
+[Link to full data model](./readme_images/django-data-model.png)
+
+The core model I designed and utilised:
+![Core data model](./readme_images/core-models.png)
+
+Key things to note is the relation between the Booking and the User. I opted against uploading images for bookings at this stage but considered it as a possibility. Some people may find it useful, but the impact would be low as the next stage of the User Journey is to speak 'offline' and this could be covered more effectively with the expertise required. A picture would be less necessary and could be a blocker on the user journey.
+
+The Project Model is separate and would be for the admin to manage and upload an image and give a blurb to advertise it to visitors to the website
 
 ### The Skeleton Plane
+
+I used lucidchart to draw some basic wireframes to cover the main pages
+
+![Wireframes](./readme_images/wireframes.png)
+
+In words: the aim is to keep this simple, both as this is a Minimum Viable Product (MVP) and in line with the aesthetic of the main audience that is likely to be more practical. The main page is the homepage, with a simple navbar and footer, a brief 'sales pitch' and the portfolio of projects. From here users can click to login or sign up from the Nav bar and then this reveals the link to 'Book a Consultation' (a form page). It also allows the user to see their own bookings when they click 'View Bookings'
+
+While this view is helpful for the admin, the main page him/her is the 'Manage Projects' page. This view allows visibility of all projects and and whether or not they are publically visible at a glance. It also links to forms to edit or delete as needed. Similarly the admin has access to all upcoming consultation bookings on another page to be able to contact customers about their enquiries and bookings and edit and/or approve as necessary. 
+
+### The Surface Plane
+
+As alluded throughout, the aim is to be simple. I selected the 'ADLaM Display' Google font for the the 'logo' or name as it looks a little like it could be an engraving. I also opted for a brown collour. This stylised name is to be used in both the navbar and footer. A similar lightened brown colour will be used for the paragraph and any instructions at the top of the pages
 
 ## Features
 
