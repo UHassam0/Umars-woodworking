@@ -1,15 +1,44 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
+#woodwork {
+    font-family: 'ADLaM Display', cursive;
+    color: #5C4033;
+    text-transform: uppercase;
+}
+
+#footer-logo {
+    font-family: 'ADLaM Display', cursive;
+    color: #5c4033;
+    text-transform: uppercase;
+}
+
+.active {
+    font-weight: 500;
+}
+
 .intro {
-  background-image: url("https://drive.google.com/uc?export=view&id=1_CCbW7i4pQR77Io7ufEZTuqO-0VPBx8O");
-  color: white;
-  font-weight: bolder;
+    background-color: #6e584e15;
+    color: black;
+    font-weight: 600;
 }
 
 p {
   font-size: medium;
 }
 
-.img-small {
-  max-height: auto;
-  width: 180px;
-}
 
+.img-container {
+    position: relative;
+    }
+
+td.accepted {
+    background-color: #90EE90;
+}

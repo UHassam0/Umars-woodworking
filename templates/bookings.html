@@ -22,7 +22,7 @@
             <td>{{ booking.discussion_details }}</td>
             <td>{{ booking.booking_date }}</td>
             <td>{{ booking.booking_time }}</td>
-            <td>{{ booking.get_booking_status_display }}</td>
+            <td class="status">{{ booking.get_booking_status_display }}</td>
           </tr>
 
         {% endfor %}
@@ -36,11 +36,24 @@
 <div class="mt-5 text-center">
   <h3>You need to login or signup</h3>
 
-  <a href="{% url 'account_login' %}" type="button" class="btn btn-success btn-lg">Go to Login
+  <a href="{% url 'account_login' %}" class="btn btn-success btn-lg">Go to Login
   </a>
-  <a href="{% url 'account_signup' %}" type="button" class="btn btn-success btn-lg">Go to Signup
+  <a href="{% url 'account_signup' %}" class="btn btn-success btn-lg">Go to Signup
   </a>
 </div>
 
 {% endif %} 
+
+<script>
+    let statusCells = document.getElementsByClassName('status');
+    for (let cell of statusCells) {
+        console.log(cell.innerHTML);
+        if (cell.innerHTML == "Accepted") {
+            cell.className = "status accepted";
+            console.log(cell.innerHTML)
+        }
+    }
+
+</script>
+
 {% endblock %}

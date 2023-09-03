@@ -13,7 +13,7 @@ class ProjectAdmin(SummernoteModelAdmin):
 
 
 @admin.register(Booking)
-class BookingAdmin(admin.ModelAdmin):
+class BookingAdmin(SummernoteModelAdmin):
     list_display = ('client', 'first_name', 'last_name', 'email_address',
                     'booking_date', 'booking_time', 'discussion_details',
                     'booking_subject')

@@ -1,40 +1,43 @@
 {% extends "base.html" %}
 {% block content %}
 {% if user.is_superuser %}
-<div>
-    <a href="{% url 'create_project' %}">
-        <button type="button" class="btn btn-success">Add New Project</button>
+<div class="container-fluid">
+    <div class="row justify-content-center intro">
+        <div class="col-10 mt-3 mb-2">
+            <p>As the admin, use this page to review the projects saved and being displayed on the hompage. You can Add, Edit and Delete from here</p>
+            <div class="row justify-content-center">
+    <a href="{% url 'create_project' %}" class="btn btn-success">Add New Project
     </a>
 </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid">
 <div class="col-12 mt-3 left">
     <div class="row">
         {% for proj in projects %}
         <div class="col-md-4">
-            <div class="card mb-4">
-                
-                <div class="card-header">
-                    <a href="{% url 'edit_project' proj.pk %}" type="button"
-                     class="btn btn-warning">Edit
-                    </a>
-                    <a href="{% url 'delete_project' proj.pk %}" type="button"
-                    class="btn btn-danger">Delete
-                    </a>
-                </div>
-
+            <div class="card mb-3">
                 <div class="card-body">
-                    <div class="image-container">
-                        {% if "placeholder" in proj.image.url %}
-                        <img class="card-img-top"
-                            src="http://drive.google.com/uc?export=view&id=1_CCbW7i4pQR77Io7ufEZTuqO-0VPBx8O">
-                        {% else %}
-                        <img class="card-img-top img-small" src=" {{ proj.image.url }}">
-                        {% endif %}
+                    <div class="img-container">
+
+                        <img class="card-img-top" src=" {{ proj.image.url }}" alt="picture of {{ proj.project_name }} project">
 
                     </div>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item bg-light d-flex justify-content-around">
+        <a href="{% url 'edit_project' proj.pk %}" class="btn btn-warning">Edit
+        </a>
+        <a href="{% url 'delete_project' proj.pk %}" class="btn btn-danger">Delete
+        </a>
+    </li>
 
-                    <h2 class="card-title">{{ proj.project_name }}</h2>
+</ul>
+                    <h5 class="card-title">{{ proj.project_name | title }}</h5>
                     <h6>Is Publically Visible?: {{ proj.public_visible }}</h6>
-                    <p>{{ proj.description | safe | truncatechars:100 }}</p>
+                    <p>{{ proj.description | safe }}</p>
 
                 </div>
             </div>
@@ -48,12 +51,13 @@
     </div>
 </div>
 </div>
+
 {% else %}
 
 <div class="mt-5 text-center">
     <h3>Sorry!! This Page Is Restricted</h3>
 
-    <a href="{% url 'home' %}" type="button" class="btn btn-success btn-lg">Return Home
+    <a href="{% url 'home' %}" class="btn btn-success btn-lg">Return Home
     </a>
 </div>
 {% endif %}

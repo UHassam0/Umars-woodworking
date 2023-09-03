@@ -1,22 +1,35 @@
 {% extends "base.html" %} 
 {% block content %} 
 {% load crispy_forms_tags %} 
-{% if user.is_authenticated %}
-
-<form action="" method="post" enctype="multipart/form-data">
+{% if user.is_superuser %}
+<div class="container-fluid">
+    <div class="row justify-content-center intro">
+        <div class="col-10 mt-3 mb-2">
+            <p>As the admin, use this page to edit the booking. Ensure this is done in discussion with the client.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+<form method="post" enctype="multipart/form-data">
   {% csrf_token %} 
   {{ form | crispy }}
-  <input type="submit" value="Save" />
-<a href="{% url 'rev_bk' %}" type="button">Cancel</a>
+<input type="submit" value="Save" class="btn btn-success">
+<a href="{% url 'rev_bk' %}" class="btn btn-secondary">Cancel</a>
 </form>
+        </div>
+        </div>
+        </div>
 
 {% else %}
 <div class="mt-5 text-center">
   <h3>You need to login or signup</h3>
 
-  <a href="{% url 'account_login' %}" type="button" class="btn btn-success btn-lg">Go to Login
+  <a href="{% url 'account_login' %}" class="btn btn-success btn-lg">Go to Login
   </a>
-  <a href="{% url 'account_signup' %}" type="button" class="btn btn-success btn-lg">Go to Signup
+  <a href="{% url 'account_signup' %}" class="btn btn-success btn-lg">Go to Signup
   </a>
 </div>
 {% endif %} 

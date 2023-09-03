@@ -32,7 +32,7 @@
                         <td>{{ booking.get_booking_status_display }}</td>
                         <td>
                             <a href="{% url 'edt_bk' booking.pk %}">
-                            <button class="btn-success">
+                            <button type="button" class="btn-success">
                             Edit
                         </button>
                     </a>
@@ -50,7 +50,7 @@
 <div class="mt-5 text-center">
     <h3>Resctricted Page</h3>
 
-<a href="{% url 'home' %}" type="button" class="btn btn-success btn-lg">Return Home
+<a href="{% url 'home' %}" class="btn btn-success btn-lg">Return Home
 </a>
 </div>
 

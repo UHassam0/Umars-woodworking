@@ -3,19 +3,33 @@
 {% load crispy_forms_tags %} 
 
 {% if user.is_superuser %}
+<div class="container-fluid">
+    <div class="row justify-content-center intro">
+        <div class="col-10 mt-3 mb-2">
+            <p>As the admin, use this page to add additional projects. For best results use images sized 640x320 or twice as wide as they are high i.e. landscape.
+                You will also be able to edit from the  next page.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
 
-<form action="" method="post" enctype="multipart/form-data">
+<form method="post" enctype="multipart/form-data">
   {% csrf_token %} 
   {{ form | crispy }}
-  <input type="submit" value="Save" />
-<a href="{% url 'manage' %}"><button>Cancel</button></a>
+<input type="submit" value="Save" class="btn btn-success">
+<a href="{% url 'rev_bk' %}" class="btn btn-secondary">Cancel</a>
 </form>
-
+        </div>
+        </div>
+        </div>
 {% else %}
 <div class="mt-5 text-center">
   <h3>Only Admin can add Projects</h3>
 
-  <a href="{% url 'home' %}" type="button" class="btn btn-success btn-lg">Return Home
+  <a href="{% url 'home' %}" class="btn btn-success btn-lg">Return Home
   </a>
 </div>
 {% endif %} 

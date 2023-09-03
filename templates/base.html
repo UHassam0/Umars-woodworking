@@ -3,27 +3,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="Description" content="Enter your description here" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here">
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Hassam Woodworking</title>
     <link rel="icon" type="image/x-icon" href="{% static 'saw-24260.svg' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
+    </style>
   </head>
+
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="{% url 'home' %}">Hassam Woodworking</a>
+          <a id="woodwork" class="navbar-brand" href="{% url 'home' %}">HASSAM WOODWORKING</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -39,7 +41,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a
-                  class="nav-link active"
+                  class="nav-link {% ifequal request.path '/' %} active {% endifequal %}"
                   aria-current="page"
                   href="{% url 'home' %}"
                   >Home</a
@@ -47,7 +49,7 @@
               </li>
               {% if user.is_superuser %}
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'manage' %}"
+                <a class="nav-link {% if 'projects' in request.path %} active {% endif %}" href="{% url 'manage' %}"
                   >Manage Projects</a
                 >
               </li>
@@ -55,7 +57,7 @@
               {% if user.is_authenticated %}
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  class="nav-link dropdown-toggle {% if 'booking' in request.path %} active {% endif %}"
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -66,41 +68,33 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a class="dropdown-item" href="{% url 'create_booking' %}"
-                      >Make a Booking
+                    <a class="dropdown-item {% if 'createbooking' in request.path %} active {% endif %}" href="{% url 'create_booking' %}"
+                      >Book a Consultation
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="{% url 'bookings' %}">View Bookings</a>
+                    <a class="dropdown-item {% ifequal request.path '/bookings' %} active {% endifequal %}" href="{% url 'bookings' %}">View Bookings</a>
                   </li>
                                 {% if user.is_superuser %}
 
                 <li>
-                    <a class="dropdown-item" href="{% url 'rev_bk' %}">Review Upcoming Bookings</a>
+                    <a class="dropdown-item  {% if 'reviewbookings' in request.path %} active {% endif %}" href="{% url 'rev_bk' %}">Review Upcoming Bookings</a>
                 </li>
                 {% endif %}
                 </ul>
               </li>
 
-              {% else %}
-
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'account_signup' %}"
-                  >Make a Booking
-                </a>
-              </li>
-
               {% endif %} 
               {% if user.is_authenticated %}
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                <a class="nav-link {% if 'logout' in request.path %} active {% endif %}" href="{% url 'account_logout' %}">Logout</a>
               </li>
               {% else %}
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'account_signup' %}">Signup</a>
+                <a class="nav-link {% if 'signup' in request.path %} active {% endif %}" href="{% url 'account_signup' %}">Signup</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                <a class="nav-link {% if 'login' in request.path %} active {% endif %}" href="{% url 'account_login' %}">Login</a>
               </li>
               {% endif %}
             </ul>
@@ -125,9 +119,9 @@
     <!-- Content Goes here -->
     {% endblock content %}
 
-<footer id="sticky-footer" class="flex-shrink-0 py-4 bg-light text-grey-50">
+<footer class="flex-shrink-0 py-4 bg-light text-grey-50">
     <div class="container text-center">
-        <small>Copyright &copy; Umar Hassam</small>
+        <small> Contact <span id="footer-logo">Hassam Woodworking</span> @ 07923 123 123 or hassam_woodworking@email.com</small>
     </div>
 </footer>
 

@@ -11,6 +11,14 @@ There may be 3 type of users:
 1. Someone looking for a specific project
 1. Already has an account, book and manage consultations and appointments
 
+### The Stratrgy Plane
+
+### The Scope Plane
+
+### The Structure Plane
+
+### The Skeleton Plane
+
 ## Features
 
 Homepage
@@ -24,26 +32,6 @@ respond to requests
 
 [TESTING.md](TESTING.md)
 
-### Responsiveness Testing
-
-### Browser Compatibility
-
-### Bugs Resolved and Unresolved
-
-collectstatic match cloudinary to workspace especially overwrite/replace style.css from walkthrough
-not auto completing slug on create projects page
-not notifying user when projects created - although takes back to manage projects and shows it there at the top
-homepage horizontal scroll required
-cancel button on edit
-
-### Lighthouse testing
-
-### Code Validation
-
-### User Story Testing
-
-### Features Testing
-
 ## Deployment, forking, cloning
 
 ## References
@@ -56,7 +44,9 @@ Bing Chat to generate some fluff text
 <https://stackoverflow.com/questions/63550890/how-to-pass-logged-users-id-to-createview>
 <https://stackoverflow.com/questions/66248147/could-someone-explain-why-we-return-super-form-validform-in-form-valid-metho>
 [Form date field fix](https://forum.djangoproject.com/t/cant-change-type-attribute-in-django-crispy-forms/10054/11)
-[Top 5 errors accoring o Google](https://www.pingdom.com/blog/the-5-most-common-http-errors-according-to-google/)
+[Top 5 errors accoring to Google](https://www.pingdom.com/blog/the-5-most-common-http-errors-according-to-google/)
 [remove bootstrap button line](https://stackoverflow.com/questions/66436957/how-to-remove-the-small-blue-line-in-bootstrap-buttons)
 Image by <a href="https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=24260">Clker-Free-Vector-Images</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=24260">Pixabay</a>
 [Footer from here](https://startbootstrap.com/snippets/sticky-footer-flexbox)
+[footer stick to bottom](https://dev.to/nehalahmadkhan/how-to-make-footer-stick-to-bottom-of-web-page-3i14)
+[active nav link](https://stackoverflow.com/questions/19268727/django-how-to-get-the-name-of-the-template-being-rendered)

@@ -2,18 +2,18 @@
 {% block content %} 
 {% if user.is_superuser %}
 
-<form action="" method="post" enctype="multipart/form-data">
+<form method="post" enctype="multipart/form-data">
   {% csrf_token %}
   <p>Are you sure you want to delete "{{ project.project_name}}"?</p>
-  <input type="submit" value="Confirm" />
-  <a href="{% url 'manage' %}" type="button">Cancel</a>
+<input type="submit" value="Delete" class="btn btn-warning">
+<a href="{% url 'rev_bk' %}" class="btn btn-secondary">Cancel</a>
 </form>
 
 {% else %}
 <div class="mt-5 text-center">
   <h3>Only Admin can delete projects</h3>
 
-  <a href="{% url 'home' %}" type="button" class="btn btn-success btn-lg">Return Home
+  <a href="{% url 'home' %}" class="btn btn-success btn-lg">Return Home
   </a>
 </div>
 {% endif %}
