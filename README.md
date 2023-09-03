@@ -46,7 +46,9 @@ The vision is to provide a family the ability to showcase their woodworking that
 
 #### User Stories
 
-Agile, milestones, MoSCoW
+I used the Agile Methodology in this project. I defined the User Stories that I believed I needed for the MVP. I defined Acceptance Criteria and assigned the User Stories to milestones. The milestones did not quite work out in staying separately but are the sections of the User Experience/Journey I defined and used. I loosely utilised the MoSCoW prioiritisation techinque by using GitHub issue labels for must-have, could-have and should-have. I did not waste time coming up with wont-haves in this project.
+
+All the User Stories are listed below. As you can see a couple of the ones that are not must-have are not yet complete
 
 **Title**|**Assignees**|**Status**|**Labels**|**Milestone**
 :-----:|:-----:|:-----:|:-----:|:-----:

@@ -2,7 +2,7 @@
 
 ### Responsiveness Testing
 
-### Browser Compatibility
+I have been able to use the site on my phone with no issue and have used chrome developer tools and the mockup generator linked in credits to test this and spotted no issues
 
 ### Bugs Resolved and Unresolved
 
@@ -13,6 +13,10 @@ homepage horizontal scroll required
 cancel button on edit
 
 ### Lighthouse testing
+
+Lighthouse scoring is dropping slightly on the performance due to image files size. This is only on the manage projects page(lighthouse screeecnshot below). Going forward images uploaded should definitely be compressed and perhaps look at alternatives to Cloudinary. However, this is not currently a significant problem
+
+
 
 ### Code Validation
 
