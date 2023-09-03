@@ -16,28 +16,55 @@ cancel button on edit
 
 Lighthouse scoring is dropping slightly on the performance due to image files size. This is only on the manage projects page(lighthouse screeecnshot below). Going forward images uploaded should definitely be compressed and perhaps look at alternatives to Cloudinary. However, this is not currently a significant problem
 
-
+![Manage Projects Page Lighthouse Report](./readme_images/manage-projects-lighthouse.png)
 
 ### Code Validation
 
+#### Python
+
+All my Python code has passed through the [CI Python Linter](https://pep8ci.herokuapp.com/) with no issues
+
+#### JavaScript
+
+My JavaScript snippet passed through [JSHint](https://jshint.com/) with no issues
+
+![JSHint Validaiton](./readme_images/jshint-validaition.png)
+
+#### HTML
+
+All source code passed through the [W3C Validator](https://validator.w3.org/nu/#textarea) with no errors for each page
+
+#### CSS
+
+My CSS source code passed through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator) with no errors
+
 ### User Story Testing
 
-**Title**|**Assignees**|**Status**|**Labels**|**Milestone**
-:-----:|:-----:|:-----:|:-----:|:-----:
-[USER STORY: Navigation](https://github.com/UHassam0/Umars-woodworking/issues/3)|UHassam0|In Progress|must have|Homepage
-[USER STORY: Accept/Reject meeting requests](https://github.com/UHassam0/Umars-woodworking/issues/7)|UHassam0|In Progress|could have|Bookings
-[USER STORY: Changes notifications - user](https://github.com/UHassam0/Umars-woodworking/issues/13)|UHassam0|Done|must have|Bookings
-[USER STORY: Changes notifications](https://github.com/UHassam0/Umars-woodworking/issues/12)|UHassam0|Done|must have|Example Projects
-[USER STORY: Review meeting requests](https://github.com/UHassam0/Umars-woodworking/issues/6)|UHassam0|Done|must have|Bookings
-[USER STORY: Request meeting](https://github.com/UHassam0/Umars-woodworking/issues/5)|UHassam0|Done|must have|Bookings
-[USER STORY: View my bookings/meeting requests](https://github.com/UHassam0/Umars-woodworking/issues/10)|UHassam0|Done|should have|Bookings
-[USER STORY: Edit Example Projects](https://github.com/UHassam0/Umars-woodworking/issues/4)|UHassam0|Done|must have|Example Projects
-[USER STORY: Delete Projects](https://github.com/UHassam0/Umars-woodworking/issues/9)|UHassam0|Done|must have|Example Projects
-[USER STORY: Register](https://github.com/UHassam0/Umars-woodworking/issues/1)|UHassam0|Done|must have|Authorisation
-[USER STORY: Add new projects](https://github.com/UHassam0/Umars-woodworking/issues/8)|UHassam0|Done|must have|Example Projects
-[USER STORY: Projects - view full details](https://github.com/UHassam0/Umars-woodworking/issues/11)|UHassam0|To Do|should have|Example Projects
-[USER STORY: Change meeting status when passed](https://github.com/UHassam0/Umars-woodworking/issues/14)|UHassam0|To Do|could have|Bookings
-[USER STORY: Display example projects](https://github.com/UHassam0/Umars-woodworking/issues/2)|UHassam0|Done|must have|Homepage
-[USER STORY: Edit bookings](https://github.com/UHassam0/Umars-woodworking/issues/15)|UHassam0|Done|must have|Bookings
+**Title**|**Acceptance Criteria**|**Evaluation**
+:-----:|:-----:|:-----:
+[USER STORY: Accept/Reject meeting requests](https://github.com/UHassam0/Umars-woodworking/issues/7)|Simple button to update|Checked and Passed in development and in deployed
+[USER STORY: Add new projects](https://github.com/UHassam0/Umars-woodworking/issues/8)| page to add projects|Checked and Passed in development and in deployed
+[USER STORY: Add new projects](https://github.com/UHassam0/Umars-woodworking/issues/8)| creates new projects|Checked and Passed in development and in deployed
+[USER STORY: Add new projects](https://github.com/UHassam0/Umars-woodworking/issues/8)| validates and gives feedback|Checked and Passed in development and in deployed
+[USER STORY: Add new projects](https://github.com/UHassam0/Umars-woodworking/issues/8)| only accessible to superuser|Checked and Passed in development and in deployed
+[USER STORY: Changes notifications - user](https://github.com/UHassam0/Umars-woodworking/issues/13)|Any notification - whether new page or page alert|Checked and Passed in development and in deployed
+[USER STORY: Changes notifications](https://github.com/UHassam0/Umars-woodworking/issues/12)|Any notification - whether new page or page alert|Checked and Passed in development and in deployed
+[USER STORY: Delete Projects](https://github.com/UHassam0/Umars-woodworking/issues/9)| Only Site Admin can make changes|Checked and Passed in development and in deployed
+[USER STORY: Delete Projects](https://github.com/UHassam0/Umars-woodworking/issues/9)| Can Delete projects|Checked and Passed in development and in deployed
+[USER STORY: Display example projects](https://github.com/UHassam0/Umars-woodworking/issues/2)| Projects display on homepage|Checked and Passed in development and in deployed
+[USER STORY: Display example projects](https://github.com/UHassam0/Umars-woodworking/issues/2)| Display clearly with image and brief description|Checked and Passed in development and in deployed
+[USER STORY: Edit bookings](https://github.com/UHassam0/Umars-woodworking/issues/15)| Edit page to edit meeting requests|Checked and Passed in development and in deployed
+[USER STORY: Edit bookings](https://github.com/UHassam0/Umars-woodworking/issues/15)| Can edit all fields|Checked and Passed in development and in deployed
+[USER STORY: Edit Example Projects](https://github.com/UHassam0/Umars-woodworking/issues/4)| Only Site Admin can make changes|Checked and Passed in development and in deployed
+[USER STORY: Edit Example Projects](https://github.com/UHassam0/Umars-woodworking/issues/4)| Can Edit Details, Show/Hide|Checked and Passed in development and in deployed
+[USER STORY: Navigation](https://github.com/UHassam0/Umars-woodworking/issues/3)| Can go to Login/Signup, bookings, make a booking, and example projects|Checked and Passed in development and in deployed
+[USER STORY: Navigation](https://github.com/UHassam0/Umars-woodworking/issues/3)| Nav bar is easy to use and doesn't obstruct anything|Checked and Passed in development and in deployed
+[USER STORY: Register](https://github.com/UHassam0/Umars-woodworking/issues/1)| Can create an account with basic details|Checked and Passed in development and in deployed
+[USER STORY: Register](https://github.com/UHassam0/Umars-woodworking/issues/1)| Login/Register/logout buttons on Navbar|Checked and Passed in development and in deployed
+[USER STORY: Request meeting](https://github.com/UHassam0/Umars-woodworking/issues/5)| be able to input sufficient detail|Checked and Passed in development and in deployed
+[USER STORY: Request meeting](https://github.com/UHassam0/Umars-woodworking/issues/5)| Visual confirmation that the meeting request is sent and pending|Checked and Passed in development and in deployed
+[USER STORY: Review meeting requests](https://github.com/UHassam0/Umars-woodworking/issues/6)| Be able to see enough details such as contact information|Checked and Passed in development and in deployed
+[USER STORY: View my bookings/meeting requests](https://github.com/UHassam0/Umars-woodworking/issues/10)| page to view any upcoming bookings|Checked and Passed in development and in deployed
+[USER STORY: View my bookings/meeting requests](https://github.com/UHassam0/Umars-woodworking/issues/10)| only view own bookings|Checked and Passed in development and in deployed
 
 ### Features Testing

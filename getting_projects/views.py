@@ -61,8 +61,9 @@ class CreateBooking(SuccessMessageMixin, generic.CreateView):
     success_message = "%(booking_subject)s was created successfully"
 
     def form_valid(self, form):
-        form.instance.client = self.request.user
-        return super().form_valid(form)
+        if form.self is not None:
+            form.instance.client = self.request.user
+            return super().form_valid(form)
 
 
 class ReviewBookings(generic.ListView):

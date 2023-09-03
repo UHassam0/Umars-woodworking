@@ -52,8 +52,8 @@ All the User Stories are listed below. As you can see a couple of the ones that 
 
 **Title**|**Assignees**|**Status**|**Labels**|**Milestone**
 :-----:|:-----:|:-----:|:-----:|:-----:
-[USER STORY: Navigation](https://github.com/UHassam0/Umars-woodworking/issues/3)|UHassam0|In Progress|must have|Homepage
-[USER STORY: Accept/Reject meeting requests](https://github.com/UHassam0/Umars-woodworking/issues/7)|UHassam0|In Progress|could have|Bookings
+[USER STORY: Navigation](https://github.com/UHassam0/Umars-woodworking/issues/3)|UHassam0|Done|must have|Homepage
+[USER STORY: Accept/Reject meeting requests](https://github.com/UHassam0/Umars-woodworking/issues/7)|UHassam0|Done|could have|Bookings
 [USER STORY: Changes notifications - user](https://github.com/UHassam0/Umars-woodworking/issues/13)|UHassam0|Done|must have|Bookings
 [USER STORY: Changes notifications](https://github.com/UHassam0/Umars-woodworking/issues/12)|UHassam0|Done|must have|Example Projects
 [USER STORY: Review meeting requests](https://github.com/UHassam0/Umars-woodworking/issues/6)|UHassam0|Done|must have|Bookings
