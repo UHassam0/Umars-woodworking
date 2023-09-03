@@ -35,4 +35,5 @@ cancel button on edit
 [USER STORY: Change meeting status when passed](https://github.com/UHassam0/Umars-woodworking/issues/14)|UHassam0|To Do|could have|Bookings
 [USER STORY: Display example projects](https://github.com/UHassam0/Umars-woodworking/issues/2)|UHassam0|Done|must have|Homepage
 [USER STORY: Edit bookings](https://github.com/UHassam0/Umars-woodworking/issues/15)|UHassam0|Done|must have|Bookings
+
 ### Features Testing

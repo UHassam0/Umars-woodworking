@@ -1,21 +1,50 @@
 # Umar's Imaginary Woodworking
 
-A little site as if I am a woodworker and carpenter taking bookings for consultations and work.
-Inspired by my brother's and uncle's woodworking
+![Mockups](./readme_images/mockups.png)
+
+Umar's Imaginary Woodworking is inspired by my uncle and my brother. My uncle is an avid woodworker and has produced some awesome pieces andmy brother is starting on is journey. Unfortunately, I have been unable to include much of their work at this time. This is a little site as if we are woodworker and carpenter taking bookings for consultations and work. We are able to upload and showcase our projects and visitors to the site are able to login and make and manage bookings for consultations/appointments with us. Hence the webpage now says Hassam Woodworking
+
+Live site: [HERE](https://umars-woodworking-78c6e707aec6.herokuapp.com/)
+
+## Contents
+
+- [Umar's Imaginary Woodworking](#umars-imaginary-woodworking)
+  - [Contents](#contents)
+  - [UX Design](#ux-design)
+    - [The Strategy Plane](#the-strategy-plane)
+    - [The Scope Plane](#the-scope-plane)
+    - [The Structure Plane](#the-structure-plane)
+    - [The Skeleton Plane](#the-skeleton-plane)
+  - [Features](#features)
+  - [Technologies](#technologies)
+  - [Testing](#testing)
+  - [Deployment, forking, cloning](#deployment-forking-cloning)
+  - [References](#references)
 
 ## UX Design
 
-There may be 3 type of users:
+I identified 4 potential types of users:
 
-1. Just browsing
-1. Someone looking for a specific project
-1. Already has an account, book and manage consultations and appointments
+1. Just browsing - this is someone who just happens on the page and may be drawn in
+1. Someone looking for a specific project - this is someone who has arrived with a purpose that we may be able to fulfill
+1. Already has an account, book and manage consultations and appointments - a satisfied and returning
+1. The admin user - in this imaginary situation - would be myself and eventually a hired administrator
 
-### The Stratrgy Plane
+### The Strategy Plane
+
+The vision is to provide a family the ability to showcase their woodworking that they're passionate about in order to get customers and start a conversation. The design should be robust and practical - suitable for people interested in durable and sustainable wooden products.
 
 ### The Scope Plane
 
+- The admin user should be able to easily manage the products loaded and visible on the website
+- The visitor should be able to view the portfolio of projects curated by the admin
+- The visitor/user should be able to login
+- The visitor/user should be able to book a consultation and view booked consultations
+
 ### The Structure Plane
+
+I drew some basic wireframes to cover the main pages
+![Wireframes](./readme_images/wireframes.png) 
 
 ### The Skeleton Plane
 
@@ -30,7 +59,7 @@ respond to requests
 
 ## Testing
 
-[TESTING.md](TESTING.md)
+Testing detailed in [TESTING.md](TESTING.md)
 
 ## Deployment, forking, cloning
 
@@ -50,3 +79,4 @@ Image by <a href="https://pixabay.com/users/clker-free-vector-images-3736/?utm_s
 [Footer from here](https://startbootstrap.com/snippets/sticky-footer-flexbox)
 [footer stick to bottom](https://dev.to/nehalahmadkhan/how-to-make-footer-stick-to-bottom-of-web-page-3i14)
 [active nav link](https://stackoverflow.com/questions/19268727/django-how-to-get-the-name-of-the-template-being-rendered)
+[Mock-Up Generator](https://techsini.com/multi-mockup/index.php)
