@@ -25,12 +25,10 @@
 
 {% else %}
 <div class="mt-5 text-center">
-  <h3>You need to login or signup</h3>
+    <h3>Resctricted Page</h3>
 
-  <a href="{% url 'account_login' %}" class="btn btn-success btn-lg">Go to Login
-  </a>
-  <a href="{% url 'account_signup' %}" class="btn btn-success btn-lg">Go to Signup
-  </a>
+    <a href="{% url 'home' %}" class="btn btn-success btn-lg">Return Home
+    </a>
 </div>
 {% endif %} 
 {% endblock %}

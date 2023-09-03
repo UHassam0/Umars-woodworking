@@ -1,6 +1,9 @@
 from django.contrib import admin
 from .models import Project, Booking
 from django_summernote.admin import SummernoteModelAdmin
+"""
+Register the Project mdoel to the admin app/dashboard
+"""
 
 
 @admin.register(Project)
@@ -10,6 +13,11 @@ class ProjectAdmin(SummernoteModelAdmin):
     search_fields = ['project_name', 'description']
     list_filter = ('public_visible', 'updated_on')
     summernote_fields = ('description',)
+
+
+"""
+Register the Project mdoel to the admin app/dashboard
+"""
 
 
 @admin.register(Booking)

@@ -6,7 +6,7 @@
   {% csrf_token %}
   <p>Are you sure you want to delete "{{ project.project_name}}"?</p>
 <input type="submit" value="Delete" class="btn btn-warning">
-<a href="{% url 'rev_bk' %}" class="btn btn-secondary">Cancel</a>
+<a href="{% url 'manage' %}" class="btn btn-secondary">Cancel</a>
 </form>
 
 {% else %}
